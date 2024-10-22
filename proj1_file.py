@@ -48,6 +48,11 @@ def calc_n_phi(user_dicts):
         phi = (i["p"] - 1) * (i["q"] - 1)
         i["phi"] = phi
 
+def compute_d(user_dicts, e_val):
+    for i in user_dicts:
+        d = pow(e_val, -1, i["phi"])
+        i["d"] = d
+
 
 if __name__ == '__main__':
     # Testing prime num generation
@@ -57,12 +62,15 @@ if __name__ == '__main__':
     print("Prime Num Test:", prime_number)
 
     #storing users as dictionaries so process of storing/updating/adding values is simple and repeatable
-    alice = {"p": -1, "q": -1}
-    mike = {"p": -1, "q": -1}
-    greg = {"p": -1, "q": -1}
+    alice = {"Name": "Alice", "p": -1, "q": -1}
+    mike = {"Name": "Mike", "p": -1, "q": -1}
+    greg = {"Name": "Greg", "p": -1, "q": -1}
     users = [alice, mike, greg]
-    #RSA Process Below, may Cosnolidate into single function as needed
+    #RSA Process Below, may consolidate into single function as needed
     gen_rand_user_prime(users, minPrimeRange, maxPrimeRange)
     calc_n_phi(users)
+    standard_e_val = 65537 # picked because common public e values are 3, 5, 17, 257, or 65537
+    compute_d(users, standard_e_val)
+
     print(users)
 
