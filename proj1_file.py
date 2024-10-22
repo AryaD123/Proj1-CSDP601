@@ -34,9 +34,22 @@ def generate_random_prime(start, end):
         if is_prime(num):
             return num
 
+def gen_rand_user_prime(user_dicts, minPrime, maxPrime):
+    for i in user_dicts:
+        i["p"] = generate_random_prime(minPrime, maxPrime)
+        i["q"] = generate_random_prime(minPrime, maxPrime)
+
 if __name__ == '__main__':
+    # Testing prime num generation
     minPrimeRange = 2
     maxPrimeRange = 100
     prime_number = generate_random_prime(minPrimeRange, maxPrimeRange)
     print(prime_number)
+
+    alice = {"p": -1, "q": -1}
+    mike = {"p": -1, "q": -1}
+    greg = {"p": -1, "q": -1}
+    users = [alice, mike, greg]
+    gen_rand_user_prime(users, minPrimeRange, maxPrimeRange)
+    print(users)
 
