@@ -53,6 +53,10 @@ def compute_d(user_dicts, e_val):
         d = pow(e_val, -1, i["phi"])
         i["d"] = d
 
+def rsaAlgoKeys(user_dicts, e_val, minPrime, maxPrime):
+    gen_rand_user_prime(user_dicts, minPrime, maxPrime)
+    calc_n_phi(user_dicts)
+    compute_d(users, e_val)
 
 if __name__ == '__main__':
     # Testing prime num generation
