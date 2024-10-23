@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="939b0c86-95a5-418f-8f61-9dd56639437f" name="Changes" comment="Continuing RSA funcs">
+    <list default="true" id="939b0c86-95a5-418f-8f61-9dd56639437f" name="Changes" comment="Finished functions for RSA Key calculations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj1_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj1_file.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729629575104</updated>
-      <workItem from="1729629583209" duration="9536000" />
+      <workItem from="1729629583209" duration="12464000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit of making files and header">
       <option name="closed" value="true" />
@@ -139,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729637975665</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished functions for RSA Key calculations">
+      <option name="closed" value="true" />
+      <created>1729648583136</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729648583136</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,9 +160,10 @@
     <MESSAGE value="Storing Alice, Mike, Greg, and writing function to generate random prime nums for 'p' and 'q' values for each user" />
     <MESSAGE value="Continuing RSA algo functions" />
     <MESSAGE value="Continuing RSA funcs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuing RSA funcs" />
+    <MESSAGE value="Finished functions for RSA Key calculations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished functions for RSA Key calculations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Proj1_CSDP_601$proj1_file.coverage" NAME="proj1_file Coverage Results" MODIFIED="1729637878469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Proj1_CSDP_601$proj1_file.coverage" NAME="proj1_file Coverage Results" MODIFIED="1729650857579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
