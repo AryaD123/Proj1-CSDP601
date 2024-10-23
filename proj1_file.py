@@ -9,7 +9,6 @@ Description: Program for  implementing RSA Cryptography Algorithm
 import random
 import math #using libraries to check if numbers are prime and to select random prime nums
 
-
 # function for greatest common divisor
 def gcd(a, b):
     temp = 0
@@ -39,6 +38,8 @@ def gen_rand_user_prime(user_dicts, minPrime, maxPrime):
     for i in user_dicts:
         i["p"] = generate_random_prime(minPrime, maxPrime)
         i["q"] = generate_random_prime(minPrime, maxPrime)
+        print(f"Generated P value {i["p"]} and Q value {i["q"]} for user {i['Name']}")
+
 
 def calc_n_phi(user_dicts):
     for i in user_dicts:
@@ -47,11 +48,13 @@ def calc_n_phi(user_dicts):
 
         phi = (i["p"] - 1) * (i["q"] - 1)
         i["phi"] = phi
+        print(f"Calculated Phi value {i["phi"]} for user {i['Name']}")
 
 def compute_d(user_dicts, e_val):
     for i in user_dicts:
         d = pow(e_val, -1, i["phi"])
         i["d"] = d
+        print(f"Calculated D value {i["d"]} for user {i['Name']}")
 
 def rsaAlgoKeys(user_dicts, e_val, minPrime, maxPrime):
     gen_rand_user_prime(user_dicts, minPrime, maxPrime)
@@ -73,8 +76,8 @@ def input_reciever(user_dicts, e_val):
     for j in raw_msg:
         raw_msg_split.append(j)
         ascii_msg.append(ord(j))
-    print(raw_msg_split)
-    print(ascii_msg)
+    #print(raw_msg_split)
+    #print(ascii_msg)
 
     encrypted_split_msg = []
     for k in ascii_msg:
@@ -89,8 +92,8 @@ def input_reciever(user_dicts, e_val):
         M = (l ** user_dicts[chosen]["d"]) % user_dicts[chosen]["n"]
         decrypted_split_msg.append(M)
         #print(l, chr(l), "decrypted: ", M, chr(M))
-        print(f"Letter {chr(l)} (ascii {l}) ->decrypted-> {chr(M)} (Value {M})")
-
+        print(f"Letter {chr(l)} (Value {l}) ->decrypted-> {chr(M)} (Ascii {M})")
+    print()
     return 1
 
 
@@ -111,7 +114,6 @@ if __name__ == '__main__':
     for i in users: print(i)
     encrypt_decrypt_message = 0
     while(encrypt_decrypt_message > -1):
-        print()
         encrypt_decrypt_message = input_reciever(users, standard_e_val)
         for i in users: print(i)
         print()
